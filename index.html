@@ -6,11 +6,15 @@
     <title>Mundo Invertido</title>
 
     <!-- CSS  -->
-     <link rel="stylesheet" href="src/styles/reset.css">
-     <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/reset.css" />
+    <link rel="stylesheet" href="src/styles/main.css" />
   </head>
-  <body>
-    <header>
+  <body
+    class="lght-theme"
+    aria-label="O site está utilizando o tema light"
+    role="body"
+  >
+    <header aria-label="Cabeçalho da página">
       <audio id="music" autoplay>
         <source src="" />
         Este navegador não suporta o elemento de áudio.
@@ -22,6 +26,7 @@
           alt="Imagem principal Mundo Invertido"
           class="invert-element"
         />
+
         <p class="invert-element" role="text">
           Uma jornada para quem não tem medo do desconhecido. O caminho para o
           Mundo invertido é incerto, repleto de obstáculos e perigos. Porém, a
@@ -29,15 +34,18 @@
           Vecna. Você está preparado? Então clique no botão abaixo para entrar
           no Mundo Invertido!
         </p>
+
         <button id="switch-theme-button" onclick="switchTheme()">
           Inverter Mundos
         </button>
       </div>
 
-      <div id="top-characters" class="header__characters"></div>
+      <div id="top-characters" class="world-characters"></div>
     </header>
 
     <main>
+      <div id="bottom-characters" class="world-characters"></div>
+
       <section id="section-inverted-world" class="section">
         <div class="section__texts">
           <h1>O Mundo Invertido</h1>
@@ -48,12 +56,14 @@
             tudo isso ao nosso mundo.
           </p>
         </div>
+
         <img
           class="invert-element"
           src="src/assets/images/content/inverted-world.png"
           alt="Imagem ilustrativa do Mundo Invertido"
         />
       </section>
+
       <section id="section-inverted-world" class="section">
         <div class="section__video-frame" aria-hidden="true">
           <iframe
@@ -67,6 +77,7 @@
             allowfullscreen
           ></iframe>
         </div>
+
         <div class="section__texts">
           <h1>Stranger Things Vol. 5</h1>
           <p role="text">
@@ -77,6 +88,7 @@
           </p>
         </div>
       </section>
+
       <section id="section-gallery">
         <h2>A segunda série mais assistida de Netflix</h2>
         <ul class="gallery__container" role="gallery">
@@ -86,12 +98,14 @@
               alt="Imagem de Vecna"
             />
           </li>
+
           <li class="gallery__image">
             <img
               src="src/assets/images/content/serie-image-02.png"
               alt="Imagem ilustrativa dos heróis "
             />
           </li>
+
           <li class="gallery__image">
             <img
               src="src/assets/images/content/serie-image-03.png"
@@ -100,26 +114,40 @@
           </li>
         </ul>
       </section>
+
       <section id="section-form" class="section">
         <h2>O Clube de Dungeons & Dragons</h2>
         <p>
-            Para deter Vecna, os heróis de Stranger Things também precisam de você. O Clube de D&D mais famoso de Hawkins está com vagas abertas para sua próxima aventura. Se você é destemido, gosta de desafios e não tem medo de rodar o D20, chegou sua hora de se increver para fazer parte da nova campanha.
+          Para deter Vecna, os heróis de Stranger Things também precisam de
+          você. O Clube de D&D mais famoso de Hawkins está com vagas abertas
+          para sua próxima aventura. Se você é destemido, gosta de desafios e
+          não tem medo de rodar o D20, chegou sua hora de se increver para fazer
+          parte da nova campanha.
         </p>
+        
         <div class="form">
-          <h3>Entre para o clude de D&D e tenha experiências de <span>outro mundo</span></h3>
+          <h3>
+            Entre para o clude de D&D e tenha experiências de
+            <span>outro mundo</span>
+          </h3>
           <div class="form__container">
             <form action="">
               <label for="txtName">Nome Completo</label>
-              <input type="text" name="name" id="txtName"/>
+              <input type="text" name="name" id="txtName" />
 
               <label for="txtEmail">E-mail</label>
-              <input type="email" name="email" id="txtEmail"/>
+              <input type="email" name="email" id="txtEmail" />
 
               <label for="txtLevel">Level</label>
-              <input type="text" name="level" id="txtLevel"/>
+              <input type="text" name="level" id="txtLevel" />
 
               <label for="txtCharacter">Personagem</label>
-              <textarea name="character" cols="30" rows="10" id="txtCharacter"></textarea>
+              <textarea
+                name="character"
+                cols="30"
+                rows="10"
+                id="txtCharacter"
+              ></textarea>
 
               <button type="button" id="btnSubscribe">Me inscrever</button>
             </form>
