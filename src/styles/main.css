@@ -75,6 +75,25 @@ button {
     transition: background 0.5s, color 0.5s;
 }
 
+input, textarea {
+    border: 2px solid var(--primary-color-contrast);
+    background-color: var(--field-background-color);
+    color: var(--primary-color-contrast);
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+    outline: none;
+    border-color: #000;
+}
+
+label {
+    margin-bottom: 0.5rem;
+}
+
 /* HEADER */
 .header {
     background-color: var(--header-background-color);
@@ -152,4 +171,161 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* SECTION */
+.section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+    max-width: 75rem;
+}
+
+/* SECTION 01 - Inverted World */
+#section-inverted-world {
+    align-items: center;
+}
+
+#section-inverted-world .section__texts {
+    width: 50%;
+}
+
+#section-inverted-world .section__title {
+    max-width: 18.75rem;
+}
+
+/* SECTION 02 - Teaser */
+
+#section-teaser .section__texts {
+    width: 50%;
+    text-align: right;
+}
+
+#section-teaser .section__title {
+    max-width: 26.5rem;
+    display: inline-block;
+}
+
+.section__video-frame {
+    background-color: var(--primary-color);
+}
+
+.section__video-frame iframe {
+    position: relative;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    border: 3px solid;
+    border-image: linear-gradient(
+        var(--primary-color),
+        var(--primary-color-contrast)
+    );
+    border-image-slice:10;
+}
+
+/* SECTION 03 - Gallery */
+#section-gallery {
+    max-width: none;
+    justify-content: center;
+    width: 100%;
+    background: var(--background-lamp-image) 120% / 50% no-repeat;
+}
+
+#section-gallery .section__texts {
+    width: 100%;
+    max-width: 75rem;
+}
+
+#section-gallery .section__title{
+    width: 50rem;
+}
+
+#section-gallery .gallery__container{
+    display: flex;
+    gap: 3.125rem;
+    padding-left: 20px;
+}
+
+#section-gallery .gallery__image {
+    width: 15.625rem;
+    height: 15.625rem;
+    max-width: 450px;
+    max-height: 450px;
+    outline: 20px solid var(--highlight-color);
+    border: 3px solid var(--primary-color);
+    box-sizing: initial;
+}
+
+#section-gallery .gallery__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 10px solid var(--highlight-color);
+}
+
+/* SECTION 04 - Form */
+#section-form {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    text-align: center;
+}
+
+#section-form .section__title {
+    width: 37.5rem;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__title {
+    color: var(--highlight-color);
+    flex-basis: 30%;
+    text-align: left;
+
+}
+
+.form__title span {
+    color: var(--primary-color);
+}
+
+.form__container {
+    flex-basis: 50%;
+    position: relative;
+}
+
+.form__container::after {
+    content: "";
+    background-color: var(--highlight-color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: -1;
+}
+
+.form__container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--primary-color-contrast);
+    text-align: left;
+}
+
+.form__button {
+    border:none;
+    background-color: var(--field-background-color);
+    color: var(--primary-color-contrast);
+    max-width: 18.75rem;
+    align-self: center;
+}
+
+.form__button:hover {
+    background-color: var(--primary-color-contrast);
+    color: var(--field-background-color);
 }
