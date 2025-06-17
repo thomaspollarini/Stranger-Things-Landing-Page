@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="src/styles/main.css" />
   </head>
   <body
-    class="lght-theme"
+    class="light-theme"
     aria-label="O site está utilizando o tema light"
     role="body"
   >
-    <header aria-label="Cabeçalho da página">
+    <header aria-label="Cabeçalho da página" class="header">
       <audio id="music" autoplay>
         <source src="" />
         Este navegador não suporta o elemento de áudio.
@@ -24,10 +24,10 @@
         <img
           src="src/assets/images/banner/logo.svg"
           alt="Imagem principal Mundo Invertido"
-          class="invert-element"
+          class="header__image invert-element"
         />
 
-        <p class="invert-element" role="text">
+        <p class="header__text invert-element" role="text">
           Uma jornada para quem não tem medo do desconhecido. O caminho para o
           Mundo invertido é incerto, repleto de obstáculos e perigos. Porém, a
           recompensa é grande: salvar Hawkins e o mundo todo das garras de
@@ -35,7 +35,7 @@
           no Mundo Invertido!
         </p>
 
-        <button id="switch-theme-button" onclick="switchTheme()">
+        <button class="header__button" id="switch-theme-button" onclick="switchTheme()">
           Inverter Mundos
         </button>
       </div>
@@ -43,7 +43,7 @@
       <div id="top-characters" class="world-characters"></div>
     </header>
 
-    <main>
+    <main class="main">
       <div id="bottom-characters" class="world-characters"></div>
 
       <section id="section-inverted-world" class="section">
@@ -124,7 +124,7 @@
           não tem medo de rodar o D20, chegou sua hora de se increver para fazer
           parte da nova campanha.
         </p>
-        
+
         <div class="form">
           <h3>
             Entre para o clude de D&D e tenha experiências de
